@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Form Container */
+        .form-container {
+            background-color: #ffffff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        /* Main Heading */
+        h1 {
+            color: #1a202c;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* Fieldset and Legend Styling */
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        legend {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #4a5568;
+            margin-bottom: 2rem;
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 1rem;
+        }
+        
+        /* Form Group for Labels and Inputs */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Label Styling */
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #4a5568;
+        }
+
+        /* Input and Select Styling */
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="url"],
+        select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #cbd5e0;
+            border-radius: 8px;
+            background-color: #f7fafc;
+            font-size: 1rem;
+            color: #2d3748;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            box-sizing: border-box; /* Important for consistent sizing */
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #4299e1;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+        }
+
+        /* Gender Radio Button Styling */
+        .gender-group {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .gender-group label {
+            font-weight: 400;
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .gender-group input[type="radio"] {
+            margin-right: 0.5rem;
+            accent-color: #4299e1; /* Modern way to color radio buttons */
+        }
+        
+        /* Submit Button */
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 0.85rem 1rem;
+            background-color: #4299e1;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+            margin-top: 2rem;
+        }
+
+        .submit-btn:hover {
+            background-color: #3182ce;
+        }
+        
+        .submit-btn:active {
+            transform: scale(0.98);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>PORTFOLIO</h1>
+        <form>
+            <fieldset>
+                <legend>Create Your Profile</legend>
+
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="e.g., Jane Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob">
+                </div>
+
+                <div class="form-group">
+                    <label>Select your gender:</label>
+                    <div class="gender-group">
+                        <label><input type="radio" name="gen" value="male">Male</label>
+                        <label><input type="radio" name="gen" value="female">Female</label>
+                        <label><input type="radio" name="gen" value="other">Other</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course:</label>
+                    <input type="text" id="course" placeholder="e.g., Computer Science">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Contact:</label>
+                    <input type="tel" id="phone" placeholder="e.g., +91 12345 67890">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="e.g., you@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="profile">LeetCode Profile:</label>
+                    <input type="url" id="profile" placeholder="https://leetcode.com/username">
+                </div>
+
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn Profile:</label>
+                    <input type="url" id="linkedin" placeholder="https://linkedin.com/in/username">
+                </div>
+
+                <div class="form-group">
+                    <label for="cnt">Country:</label>
+                    <select name="country" id="cnt">
+                        <option value="" disabled selected>--Please choose a country--</option>
+                        <option value="IN">India</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="AU">Australia</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-btn">Create Portfolio</button>
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
