@@ -1,0 +1,19 @@
+/* pseduo class */
+
+article  section p{
+    background-color: aqua;
+}
+
+/* a[href="https://www.reddit.com/"]:hover{
+    background-color: rgb(25, 92, 151);
+} */
+h1:hover{
+    background-color: plum;
+}
+/* a[href="https://www.reddit.com/"]:active{
+    background-color: rgb(25, 92, 151);
+} */
+
+#anchor:hover{
+    background-color: rgb(10, 10, 10);
+}
