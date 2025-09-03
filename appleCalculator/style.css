@@ -1,4 +1,7 @@
-
+h1{
+    text-align: center;
+    background-color: #f1a33c;
+}
 #container {
     width: 300px;
     margin: 100px auto;
